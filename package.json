@@ -1,0 +1,28 @@
+{
+  "name": "reasy",
+  "version": "1.0.0",
+  "description": "An automatical tool for Front-end constructed by fis3",
+  "main": "index.js",
+  "bin": {
+    "reasy": "bin/reasy.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lwdgit",
+  "license": "ISC",
+  "dependencies": {
+    "fis-parser-less": "^0.1.3",
+    "fis3": "^3.0.6",
+    "fis3-hook-module": "^1.1.1",
+    "fis3-hook-relative": "^1.0.3",
+    "fis-parser-art-template": "^0.1.6",
+    "fis-parser-sass2": "^1.0.0",
+    "fis3-postpackager-loader": "^1.2.1",
+    "fis3-packager-map": "^1.0.4",
+    "fis-optimizer-html-minifier": "^0.0.9",
+    "tiny-http": "1.2.2",
+    "liftoff": "^2.1.0",
+    "minimist": "^1.1.1"
+  }
+}
