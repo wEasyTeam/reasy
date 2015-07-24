@@ -17,7 +17,7 @@
     "fis3-hook-module": "^1.1.1",
     "fis3-hook-relative": "^1.0.3",
     "fis-parser-art-template": "^0.1.6",
-    "fis-parser-sass2": "^1.0.0",
+    "fis-parser-sass": "^1.0.0",
     "fis3-postpackager-loader": "^1.2.1",
     "fis3-packager-map": "^1.0.4",
     "fis-optimizer-html-minifier": "^0.0.9",

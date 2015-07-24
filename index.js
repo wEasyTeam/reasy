@@ -29,10 +29,7 @@ fis.match('*.less', {
 
 fis.match('**/*.scss', {
     rExt: '.css', // from .scss to .css
-    parser: fis.plugin('sass2', {
-        outputStyle: 'expanded',
-        sourceMap: false
-    })
+    parser: fis.plugin('sass')
 });
 
 fis.match('**/_*.scss', {
