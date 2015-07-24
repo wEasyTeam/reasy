@@ -43,7 +43,7 @@ fis.match('**/*.{tpl,asp,html,htm}', {
     parser: fis.plugin('art-template', {
         native: false,
         define: {
-            product: 'TENDA'
+            
         }
     })
 });
