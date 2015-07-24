@@ -1,15 +1,18 @@
 {
   "name": "reasy",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "An automatical tool for Front-end constructed by fis3",
   "main": "index.js",
   "bin": {
     "reasy": "bin/reasy.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "exit 1",
+    "install": "node bin/install.js"
   },
-  "author": "lwdgit",
+  "author": {
+    "name": "lwdgit"
+  },
   "license": "ISC",
   "dependencies": {
     "fis-parser-less": ">=0.1.3",
@@ -21,7 +24,6 @@
     "fis3-postpackager-loader": ">=1.2.1",
     "fis3-packager-map": ">=1.0.4",
     "fis-optimizer-html-minifier": ">=0.0.9",
-    "tiny-http": ">=1.2.2",
     "liftoff": "^2.1.0",
     "minimist": "^1.1.1"
   },
@@ -36,5 +38,12 @@
   "bugs": {
     "url": "https://github.com/wEasyTeam/reasy/issues"
   },
-  "homepage": "https://github.com/wEasyTeam/reasy#readme"
+  "homepage": "https://github.com/wEasyTeam/reasy#readme",
+  "gitHead": "cfc0e541a553e6836c8cec0a330b68d8f525cb9e",
+  "readme": "# reasy ![NPM version](https://badge.fury.io/js/reasy.png)\r\n\r\n[![NPM Download](https://nodei.co/npm-dl/reasy.png?months=1)](https://www.npmjs.org/package/reasy)\r\n\r\n> 基于fis3的前端工程自动化工具\r\n\r\n\r\n## 安装\r\n\r\n\r\n    $npm install -g reasy\r\n    \r\n    //recommend install from npm\r\n    or\r\n\r\n    $git clone https://github.com/wEasyTeam/reasy\r\n    $cd reasy\r\n    $npm install",
+  "readmeFilename": "README.md",
+  "_id": "reasy@1.0.7",
+  "_shasum": "a45e060670cd32a7943347b47e5678568dbab4a9",
+  "_from": "reasy@*",
+  "_resolved": "file:..\\reasy"
 }

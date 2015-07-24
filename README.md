@@ -1,4 +1,4 @@
-# reasy ![NPM version](https://badge.fury.io/js/reasy.png)
+# reasy  ![NPM version](https://badge.fury.io/js/reasy.png)
 
 [![NPM Download](https://nodei.co/npm-dl/reasy.png?months=1)](https://www.npmjs.org/package/reasy)
 
@@ -11,7 +11,7 @@
     $npm install -g reasy
     
     //recommend install from npm
-    or
+    //or
 
     $git clone https://github.com/wEasyTeam/reasy
     $cd reasy
