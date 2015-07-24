@@ -24,5 +24,17 @@
     "tiny-http": "1.2.2",
     "liftoff": "^2.1.0",
     "minimist": "^1.1.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wEasyTeam/reasy.git"
+  },
+  "keywords": [
+    "fis3",
+    "reasy"
+  ],
+  "bugs": {
+    "url": "https://github.com/wEasyTeam/reasy/issues"
+  },
+  "homepage": "https://github.com/wEasyTeam/reasy#readme"
 }
