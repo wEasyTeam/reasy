@@ -7,4 +7,12 @@
 
 ## 安装
 
-    npm install -g reasy
+
+    $npm install -g reasy
+    
+    //recommend install from npm
+    or
+
+    $git clone https://github.com/wEasyTeam/reasy
+    $cd reasy
+    $npm install
