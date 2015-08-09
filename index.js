@@ -29,7 +29,11 @@ fis.match('*.less', {
 
 fis.match('**/*.scss', {
     rExt: '.css', // from .scss to .css
-    parser: fis.plugin('sass')
+    parser: fis.plugin('sass'),
+    postprocessor: fis.plugin('autoprefixer', {
+        "browsers": ["Android >= 2.3", "ChromeAndroid > 1%", "iOS >= 4"],
+        "cascade": true
+    }
 });
 
 fis.match('**/_*.scss', {
