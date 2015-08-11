@@ -14,4 +14,5 @@
 *.bak
 *.tmp
 *.cmd
+*.bat
 ~*
