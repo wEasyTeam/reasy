@@ -8,7 +8,8 @@ function install() {
     require('child_process').exec('web-debug', function(error, stdout, stderr) {
             if (error) {
                 console.log('Link web-debug...');
-                require('child_process').exec('cd ' + root, '/node_modules/web-debug/' + '&&npm link', function(error) {
+
+                require('child_process').exec('cd ' + path.join(root, '/node_modules/web-debug/') + '&&npm link', function(error) {
                   if (!error) {
                         console.log('link Success!');
                     } else {

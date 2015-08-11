@@ -29,7 +29,6 @@ exit /b 0
 exit /b 0
 
 :START
-rd /q /s dist
 call :CHECK
 reasy -v
 goto :COMPILE
