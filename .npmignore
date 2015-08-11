@@ -3,11 +3,13 @@
 /.project
 /.gitignore
 /node_modules
+/example
 /test
 /.tmp
 
 .DS_Store
 
+*.sh
 *.db
 *.bak
 *.tmp

@@ -1,6 +1,6 @@
 {
   "name": "reasy",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "An automatical tool for Front-end constructed by fis3",
   "main": "index.js",
   "bin": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "exit 1",
-    "install": "node bin/install.js"
+    "prebuild": "node bin/prebuild.js"
   },
   "author": {
     "name": "lwdgit"
@@ -26,8 +26,7 @@
     "fis-optimizer-html-minifier": ">=0.0.9",
     "fis-postprocessor-autoprefixer": ">=0.0.5",
     "liftoff": "^2.1.0",
-    "minimist": "^1.1.1",
-    "web-debug": ">0.0.1"
+    "minimist": "^1.1.1"
   },
   "repository": {
     "type": "git",

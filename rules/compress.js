@@ -7,7 +7,7 @@ module.exports = function() {
             }
         })
     })
-    .match('**.{css}', {
+    .match('**.{css,scss,less}', {
         optimizer: fis.plugin('clean-css')
     })
 

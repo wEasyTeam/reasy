@@ -1,6 +1,6 @@
 module.exports = function() {
     return this
-    .match('**.{css,js}', {
+    .match('**.{css,scss,less,js}', {
         useHash: true
     });
 };
