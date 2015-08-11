@@ -1,6 +1,5 @@
-var reasy = module.exports = require('fis3');
-
-
+var reasy = module.exports = require('fis3'),
+fs = require('fs');
 
 reasy.require.prefixes.unshift('reasy');
 reasy.cli.name = 'reasy';
@@ -16,7 +15,14 @@ Object.defineProperty(global, 'reasy', {
 
 reasy.extend = reasy.config.Config.prototype.extend = function(module, args) {
     try {
-        var modules = require('./rules/' + module);
+        var modules;
+        localModule = global.cwd + '/rules/' + module + '.js';
+        if (fs.existsSync(localModule)) {
+          modules = require(localModule);
+        } else {
+          modules = require('./rules/' + module);
+        }
+        
         return modules.apply(this, args);
     } catch (e) {
         fis.log.error('extended rules "' + module + '" not exist!');
@@ -28,7 +34,7 @@ reasy.set('project.ignore', ['node_modules/**', '.svn/**', 'output/**', 'dist/**
 
 /**
  *  针对 fis3语法进行了进一步简化，可以使用reasy.extend继承已经封装好的解析规则，如下
- *  可用规则在rules目录下
+ *  可用规则在rules目录下,你也可以在项目rules目录下添加自己的rules规则
  reasy.extend('base').extend('compress').extend('hash').extend('parse', [{
      define: {
          product: 'Tenda'

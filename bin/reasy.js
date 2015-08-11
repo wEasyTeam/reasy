@@ -20,12 +20,15 @@ cli.launch({
   configPath: argv.f || argv.file
 }, function(env) {
   var fis;
+  
+  global.cwd = env.cwd.replace(/\\/g, '/');
+
   if (!env.modulePath) {
     fis = require('../');
   } else {
     fis = require(env.modulePath);
   }
-
+  require('../libs/handleCli').init(argv);
   fis.set('system.localNPMFolder', path.join(env.cwd, 'node_modules/reasy'));
   fis.set('system.globalNPMFolder', path.dirname(__dirname));
   fis.cli.run(argv, env);
