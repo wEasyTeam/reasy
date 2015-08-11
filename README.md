@@ -6,7 +6,6 @@
 
 
 
-
 ## 安装
 
     $npm install -g reasy
@@ -23,7 +22,7 @@
 
 > 详见： [FIS3官网](http://fis.baidu.com/)
 
-> 注：项目默认配置文件不是`fis-conf.js`而是`reasy-conf.js`
+> 注：项目默认配置文件不是 *~~`fis-conf.js`~~* 而是`reasy-conf.js`
 
 
 ## 新增功能使用说明
@@ -44,9 +43,10 @@
 * base 将绝对路径转化为相对路径
 * autoprefix  可以实现css自动添加私有前缀
 * compress 对css,js,png进行压缩
-* parse 对sass,less,art-template进行编译
+* parse 对sass,less,art-template进行编译，添加雪碧图
 * md5 将文件名修改为md5形式
 * cmd 对seajs进行封装
+* debug 去除压缩属性
 
 你也可以自己编写规则放置在工程目录下的rules目录下，如：`workdir/myconf.js`,则调用方法为：`reasy.extend('myconf', [args])`。
 rule文件书写示例：
@@ -64,6 +64,14 @@ module.exports = function(args) {
  为了减少不必要的配置文件的书写，本工具在`release`命令上拓展了一个`-m`(或`--media`)命令，使用方法示例: `reasy release -m parse,compress,md5 -d ../output` 。表示编译时会将parse, compress, 和 md5规则应用上去，而不需要编写`reasy-conf.js`
 
 
+### 调试服务器
+reasy没有使用FIS3内置的`fis server`做为web服务器，原因主要有：
+
+* `fis3 release -L` 命令会将liveload.js加入页面，开发阶段可能会打调试版的代码部署至服务器，导致liveload.js无法被用户加载而出错。`web-debug`是在做为本地服务器动态解析时自动加入liveload.js,并不修改本地代码。
+* `web-debug`集成了对移动端的调试功能，可以更方便地进行移动页面开发
+
+> 使用时在工程目录执行`web-debug 8080 ./dist`即可。
+  
 
 
 ## 关于reasy
