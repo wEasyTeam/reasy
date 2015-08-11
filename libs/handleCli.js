@@ -13,4 +13,6 @@ exports.init = function(argv) {
         delete argv.m;
         delete argv.media;
     }
+    delete argv.L;
+    delete argv.live;
 }
