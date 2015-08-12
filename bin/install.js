@@ -5,13 +5,14 @@ var path = require('path'),
     fs = require('fs');
 var root = path.join(process.cwd()); //node_modules/reasy
 function install() {
-    console.log('Link web-debug...');
+    console.log('Install web-debug...');
 
-    require('child_process').exec('cd ' + path.join(root, '/node_modules/web-debug/') + '&&npm link', function(error) {
+    require('child_process').exec('npm install -g web-debug'), function(error) {
         if (!error) {
-            console.log('Link Success!');
+            console.log('Install Success!');
         } else {
-            console.log('Link Error! ' + error);
+            console.log('Install Failed! ' + error);
+            console.log('\nPlease install it manually!');
         }
     });
 }
