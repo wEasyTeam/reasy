@@ -29,7 +29,7 @@
 
 ### 新增API
 
- 为了确保一致性，reasy对FSI3的API进行了无侵略拓展。
+ 为了确保一致性，reasy对FSI3的API进行了增量拓展。
 
  * reasy.extend(ruleName)
    该方法可以实现对配置的继承，可继承的配置在reasy的rules目录下，你也可以在项目rules目录下添加自己的可复用规则，采用`module.exports`导出
@@ -61,7 +61,7 @@ module.exports = function(args) {
 
 ### 新增命令
 
- 为了减少不必要的配置文件的书写，本工具在`release`命令上拓展了一个`-m`(或`--media`)命令，使用方法示例: `reasy release -m parse,compress,md5 -d ../output` 。表示编译时会将parse, compress, 和 md5规则应用上去，而不需要编写`reasy-conf.js`
+ 为了减少不必要的配置文件的书写，本工具在`release`命令上拓展了一个`-r`(或`--rules`)命令，使用方法示例: `reasy release -r parse,compress,md5 -d ../output` 。表示编译时会将parse, compress, 和 md5规则应用上去，而不需要编写`reasy-conf.js`
 
 
 ### 调试服务器

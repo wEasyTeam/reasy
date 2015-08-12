@@ -1,6 +1,6 @@
 {
   "name": "reasy",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "An automatical tool for Front-end constructed by fis3",
   "main": "index.js",
   "bin": {
@@ -13,7 +13,7 @@
   "author": {
     "name": "lwdgit"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "fis-parser-less": ">=0.1.3",
     "fis3": ">=3.0.6",

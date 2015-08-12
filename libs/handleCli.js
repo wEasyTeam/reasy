@@ -1,17 +1,15 @@
 exports.init = function(argv) {
-    if (argv.m || argv.media) {
-        //console.log(reasy.extend)
-        //
-        argv.m = (argv.m || argv.media).toString();
-        if (argv.m === 'true')argv.m = 'base';
+    if (argv.r || argv.rules) {
+        argv.r = (argv.r || argv.rules).toString();
+        if (argv.r === 'true')argv.r = 'base';
 
-        var medias = argv.m.split(',');
-        //console.log(medias);
-        for (var m in medias) {
-            reasy.extend(medias[m]);
+        var rules = argv.r.split(',');
+
+        for (var p in rules) {
+            reasy.extend(rules[p]);
         }
-        delete argv.m;
-        delete argv.media;
+        delete argv.r;
+        delete argv.rules;
     }
     delete argv.L;
     delete argv.live;
