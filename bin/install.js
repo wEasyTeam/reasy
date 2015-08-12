@@ -7,7 +7,7 @@ var root = path.join(process.cwd()); //node_modules/reasy
 function install() {
     console.log('Install web-debug...');
 
-    require('child_process').exec('npm install -g web-debug'), function(error) {
+    require('child_process').exec('npm install -g web-debug', function(error) {
         if (!error) {
             console.log('Install Success!');
         } else {
