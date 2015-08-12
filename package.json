@@ -1,6 +1,6 @@
 {
   "name": "reasy",
-  "version": "1.1.13",
+  "version": "1.2.0",
   "description": "An automatical tool for Front-end constructed by fis3",
   "main": "index.js",
   "bin": {
