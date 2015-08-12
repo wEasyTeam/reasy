@@ -1,5 +1,5 @@
 var reasy = module.exports = require('fis3'),
-fs = require('fs');
+    fs = require('fs');
 
 reasy.require.prefixes.unshift('reasy');
 reasy.cli.name = 'reasy';
@@ -10,9 +10,9 @@ require('./libs/logo')(reasy);
 
 // register global variable
 Object.defineProperty(global, 'reasy', {
-  enumerable: true,
-  writable: false,
-  value: reasy
+    enumerable: true,
+    writable: false,
+    value: reasy
 });
 
 reasy.extend = reasy.config.Config.prototype.extend = function(module, args) {
@@ -20,11 +20,11 @@ reasy.extend = reasy.config.Config.prototype.extend = function(module, args) {
         var modules;
         localModule = global.cwd + '/rules/' + module + '.js';
         if (fs.existsSync(localModule)) {
-          modules = require(localModule);
+            modules = require(localModule);
         } else {
-          modules = require('./rules/' + module);
+            modules = require('./rules/' + module);
         }
-        
+
         return modules.apply(this, args);
     } catch (e) {
         fis.log.error('extended rules "' + module + '" not exist!');

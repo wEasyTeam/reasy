@@ -30,4 +30,4 @@ function replace() {
 }
 
 replace();
-install();
+//install();
