@@ -1,5 +1,11 @@
 @echo off
 goto :START
+exit
+
+:IF_EXIST
+SETLOCAL&PATH %PATH%;%~dp0;%cd%
+if "%~$PATH:1"=="" exit /b 1
+exit /b 0   
 
 :CHECK
 call :IF_EXIST node.exe
@@ -15,24 +21,14 @@ if %errorlevel%==1 (
     npm install -g reasy --registry=https://registry.npm.taobao.org
     echo reasy编译工具安装成功
 )
-goto :eof
+goto :EXIST
 
-
-:IF_EXIST
-SETLOCAL&PATH %PATH%;%~dp0;%cd%
-if "%~$PATH:1"=="" exit /b 1
-exit /b 0    
-
-:COMPILE
-::echo 正在进行编译...
-::reasy release -d ./dist -r ./src -w -c
-exit /b 0
 
 :START
 call :CHECK
-reasy -v
-goto :COMPILE
+call reasy -v
 pause
-exit /b 1
 
+:EXIST
+exit /b 0
 
