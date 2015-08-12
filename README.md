@@ -43,7 +43,8 @@
 * base 将绝对路径转化为相对路径
 * autoprefix  可以实现css自动添加私有前缀
 * compress 对css,js,png进行压缩
-* parse 对sass,less,art-template进行编译，添加雪碧图
+* parse 对sass,less,art-template进行编译
+* sprite 对sass,less,css添加雪碧图
 * md5 将文件名修改为md5形式
 * cmd 对seajs进行封装
 * debug 去除压缩属性

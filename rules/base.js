@@ -1,6 +1,6 @@
 module.exports = function(bool) {
     return this.hook('relative')
-    .match('**', {
-        relative: bool === false ? false : true
-    })
+        .match('**', {
+            relative: bool === false ? false : true
+        })
 };
