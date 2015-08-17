@@ -39,7 +39,7 @@ reasy.set('project.ignore', ['node_modules/**', '.svn/**', 'output/**', 'dist/**
  *  可用规则在rules目录下,你也可以在项目rules目录下添加自己的rules规则
  reasy.extend('base').extend('compress').extend('hash').extend('parse', [{
      define: {
-         product: 'Tenda'
+         product: 'mobile'
      }
  }]);
  * 
