@@ -8,15 +8,23 @@
 
 ## 安装
 
-    $npm install -g reasy
-    
-    //recommend install from npm
-    //or use git
+ 1. Linux
 
-    $git clone https://github.com/wEasyTeam/reasy
-    $cd reasy
-    $npm install
-    
+        $npm install -g reasy
+        
+        ;or use git
+        $git clone https://github.com/wEasyTeam/reasy
+        $cd reasy
+        $./reasy-install.sh
+  
+ 2. Windows
+     
+        >npm install -g reasy
+        
+        ;or use git
+        >git clone https://github.com/wEasyTeam/reasy
+        >cd reasy
+        >reasy-install.bat
 
 ## 用法
 
