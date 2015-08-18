@@ -70,7 +70,7 @@ module.exports = function(args) {
 
 ### 新增命令
 
- 为了减少不必要的配置文件的书写，本工具在`release`命令上拓展了一个`-r`(或`--rules`)命令，使用方法示例: `reasy release -r parse,compress,md5 -d ../output` 。表示编译时会将parse, compress, 和 md5规则应用上去，而不需要编写`reasy-conf.js`
+ 为了减少不必要的配置文件的书写，本工具在`release`命令上拓展了一个`-R`(或`--rules`)命令，使用方法示例: `reasy release -R parse,compress,md5 -d ../output` 。表示编译时会将parse, compress, 和 md5规则应用上去，而不需要编写`reasy-conf.js`
 
 
 ### 调试服务器

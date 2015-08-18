@@ -1,14 +1,14 @@
 exports.init = function(argv) {
-    if (argv.r || argv.rules) {
-        argv.r = (argv.r || argv.rules).toString();
-        if (argv.r === 'true')argv.r = 'base';
+    if (argv.R || argv.rules) {
+        argv.R = (argv.R || argv.rules).toString();
+        if (argv.R === 'true')argv.R = 'base';
 
-        var rules = argv.r.split(',');
+        var rules = argv.R.split(',');
 
         for (var p in rules) {
             reasy.extend(rules[p]);
         }
-        delete argv.r;
+        delete argv.R;
         delete argv.rules;
     }
 
