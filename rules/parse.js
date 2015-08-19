@@ -9,7 +9,7 @@ module.exports = function(args) {
         })
         .match('**.scss', {
             rExt: '.css', // from .scss to .css
-            parser: fis.plugin('sass2')
+            parser: fis.plugin('sass')
         })
         .match('**/_*.scss', {
             release: false

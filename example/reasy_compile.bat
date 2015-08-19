@@ -25,7 +25,7 @@ exit /b 0
 
 :COMPILE
 echo 正在进行编译...
-reasy release -d ./dist -r ./src -w -c
+reasy release -d ./dist -r ./demo -w -c
 exit /b 0
 
 :START
