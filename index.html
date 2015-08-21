@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Reasy : An automatical tool for Front-end constructed by fis3">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Reasy</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/wEasyTeam/reasy">View on GitHub</a>
+
+          <h1 id="project_title">Reasy</h1>
+          <h2 id="project_tagline">An automatical tool for Front-end constructed by fis3</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/wEasyTeam/reasy/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/wEasyTeam/reasy/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="reasy--" class="anchor" href="#reasy--" aria-hidden="true"><span class="octicon octicon-link"></span></a>reasy  <a href="https://www.npmjs.org/package/reasy"><img src="https://badge.fury.io/js/reasy.png" alt="NPM version"></a>
+</h1>
+
+<p><a href="https://www.npmjs.org/package/reasy"><img src="https://nodei.co/npm-dl/reasy.png?months=1" alt="NPM Download"></a></p>
+
+<blockquote>
+<p>基于fis3的纯前端工程自动化工具</p>
+</blockquote>
+
+<h2>
+<a id="安装" class="anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>安装</h2>
+
+<ol>
+<li>
+<p>Linux</p>
+
+<pre><code>$npm install -g reasy
+
+;or use git
+$git clone https://github.com/wEasyTeam/reasy
+$cd reasy
+$./reasy-install.sh
+</code></pre>
+</li>
+<li>
+<p>Windows</p>
+
+<pre><code>&gt;npm install -g reasy
+
+;or use git
+&gt;git clone https://github.com/wEasyTeam/reasy
+&gt;cd reasy
+&gt;reasy-install.bat
+</code></pre>
+</li>
+</ol>
+
+<h2>
+<a id="用法" class="anchor" href="#%E7%94%A8%E6%B3%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>用法</h2>
+
+<blockquote>
+<p>详见： <a href="http://fis.baidu.com/">FIS3官网</a></p>
+
+<p>注：项目默认配置文件不是 <em><del><code>fis-conf.js</code></del></em> 而是<code>reasy-conf.js</code></p>
+</blockquote>
+
+<h2>
+<a id="新增功能使用说明" class="anchor" href="#%E6%96%B0%E5%A2%9E%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>新增功能使用说明</h2>
+
+<h3>
+<a id="新增api" class="anchor" href="#%E6%96%B0%E5%A2%9Eapi" aria-hidden="true"><span class="octicon octicon-link"></span></a>新增API</h3>
+
+<p>为了确保一致性，reasy对FSI3的API进行了增量拓展。</p>
+
+<ul>
+<li>reasy.extend(ruleName)
+该方法可以实现对配置的继承，可继承的配置在reasy的rules目录下，你也可以在项目rules目录下添加自己的可复用规则，采用<code>module.exports</code>导出</li>
+<li>...</li>
+</ul>
+
+<h4>
+<a id="内置规则" class="anchor" href="#%E5%86%85%E7%BD%AE%E8%A7%84%E5%88%99" aria-hidden="true"><span class="octicon octicon-link"></span></a>内置规则</h4>
+
+<p>现有的内置规则有: </p>
+
+<ul>
+<li>relative 将绝对路径转化为相对路径</li>
+<li>autoprefix  可以实现css自动添加私有前缀</li>
+<li>compress 对css,js,png进行压缩</li>
+<li>parse 对sass,less,art-template进行编译</li>
+<li>sprite 对sass,less,css添加雪碧图</li>
+<li>md5 将文件名修改为md5形式</li>
+<li>cmd 对seajs进行封装</li>
+<li>debug 去除压缩属性</li>
+</ul>
+
+<p>你也可以自己编写规则放置在工程目录下的rules目录下，如：<code>workdir/myconf.js</code>,则调用方法为：<code>reasy.extend('myconf', [args])</code>。
+rule文件书写示例：</p>
+
+<pre><code>module.exports = function(args) {
+    return this.match('**', {
+        // ...  写法请参考FIS3配置文件写法
+    });
+};
+</code></pre>
+
+<h3>
+<a id="新增命令" class="anchor" href="#%E6%96%B0%E5%A2%9E%E5%91%BD%E4%BB%A4" aria-hidden="true"><span class="octicon octicon-link"></span></a>新增命令</h3>
+
+<p>为了减少不必要的配置文件的书写，本工具在<code>release</code>命令上拓展了一个<code>-R</code>(或<code>--rules</code>)命令，使用方法示例: <code>reasy release -R parse,compress,md5 -d ../output</code> 。表示编译时会将parse, compress, 和 md5规则应用上去，而不需要编写<code>reasy-conf.js</code></p>
+
+<h3>
+<a id="调试服务器" class="anchor" href="#%E8%B0%83%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>调试服务器</h3>
+
+<p>reasy没有使用FIS3内置的<code>fis server</code>做为web服务器，原因主要有：</p>
+
+<ul>
+<li>
+<code>fis3 release -L</code> 命令会将liveload.js加入页面，开发阶段可能会打调试版的代码部署至服务器，导致liveload.js无法被用户加载而出错。<code>web-debug</code>是在做为本地服务器动态解析时自动加入liveload.js,并不修改本地代码。</li>
+<li>
+<code>web-debug</code>集成了对移动端的调试功能，可以更方便地进行移动页面开发</li>
+</ul>
+
+<blockquote>
+<p>使用时在工程目录执行<code>web-debug 8080 ./dist</code>即可。</p>
+</blockquote>
+
+<h2>
+<a id="关于reasy" class="anchor" href="#%E5%85%B3%E4%BA%8Ereasy" aria-hidden="true"><span class="octicon octicon-link"></span></a>关于reasy</h2>
+
+<blockquote>
+<p>reasy前端自动化工具基于FIS3构建，并在其基础上对纯前端开发模式进行了一定的优化，使用更为轻便。主要特点有：</p>
+</blockquote>
+
+<ol>
+<li>对前端默认的编译插件集进行了打包，实现一键安装即可使用</li>
+<li>实现配置继承，并对常用的功能（如压缩，md5，sass编译，模版编译等）进行了封装，可以在一定程度上减少配置文件的书写量</li>
+<li>增加了<code>-m</code>配置实现无配置实现基础的压缩，md5等功能</li>
+<li>更改FIS3内置Server为<a href="https://github.com/lwdgit/web-debug/"><code>web-debug</code></a>,增加了移动端调试功能</li>
+<li>更多功能正在进一步添加...</li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Reasy maintained by <a href="https://github.com/wEasyTeam">wEasyTeam</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
