@@ -48,7 +48,7 @@
 
 现有的内置规则有: 
 
-* base 将绝对路径转化为相对路径
+* relative 将绝对路径转化为相对路径
 * autoprefix  可以实现css自动添加私有前缀
 * compress 对css,js,png进行压缩
 * parse 对sass,less,art-template进行编译
