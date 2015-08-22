@@ -11,18 +11,18 @@ exit /b 0
 :CHECK
 call :IF_EXIST node.exe
 if %errorlevel%==1 (
-    echo ä½ çš„ç³»ç»Ÿæ²¡æœ‰å®‰è£…node,æ— æ³•è¿›è¡Œç¼–è¯‘
+    echo ÄãµÄÏµÍ³Ã»ÓĞ°²×°node,ÎŞ·¨½øĞĞ±àÒë
     goto :EXIST
 )
 
 call :IF_EXIST reasy.cmd
 if %errorlevel%==1 (
-    echo ä½ çš„ç³»ç»Ÿæ²¡æœ‰å®‰è£…reasyç¼–è¯‘å·¥å…·ï¼Œæ­£åœ¨è‡ªåŠ¨å®‰è£… ,å¯èƒ½éœ€è¦æ•°åˆ†é’Ÿ
+    echo ÄãµÄÏµÍ³Ã»ÓĞ°²×°reasy±àÒë¹¤¾ß£¬ÕıÔÚ×Ô¶¯°²×° ,¿ÉÄÜĞèÒªÊı·ÖÖÓ
     npm install -g reasy --registry=https://registry.npm.taobao.org
     npm install -g web-debug --registry=https://registry.npm.taobao.org
-    call :IF_EXIST reasy.cmd || echo reasyç¼–è¯‘å·¥å…·å®‰è£…å¤±è´¥
+    call :IF_EXIST reasy.cmd || echo reasy±àÒë¹¤¾ß°²×°Ê§°Ü
 ) else (
-	echo ä½ çš„ç³»ç»Ÿå·²ç»å®‰è£…reasyç¼–è¯‘å·¥å…·ï¼Œç‰ˆæœ¬ä¸ºï¼š
+	echo ÄãµÄÏµÍ³ÒÑ¾­°²×°reasy±àÒë¹¤¾ß£¬°æ±¾Îª£º
 )
 goto :VERSION
 
@@ -35,5 +35,4 @@ call :CHECK
 goto :EOF
 
 :EXIST
-
 pause
