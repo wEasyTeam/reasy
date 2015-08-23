@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mod.js</title>
+    <link rel="stylesheet" type="text/css" href="/a.css" />
+</head>
+<body>
+    <p> Hello, World. </p>
+    <button id="btn">load async js</button>
+<script type="text/javascript" src="/static/mod.js"></script>
+<script type="text/javascript">/*resourcemap*/
+require.resourceMap({
+  "res": {
+    "modules/2-0/2-0": {
+      "url": "/modules/2-0/2-0.js",
+      "type": "js"
+    }
+  },
+  "pkg": {}
+});</script>
+<script type="text/javascript" src="/modules/cal/cal.js"></script>
+<script type="text/javascript" src="/modules/1-0/1-0.js"></script>
+<script type="text/javascript">
+    require('modules/1-0/1-0');
+
+    var btn = document.getElementById('btn');
+    var handler = function() {
+      require(['modules/2-0/2-0']);
+    };
+
+    if (btn.addEventListener) {
+      btn.addEventListener('click', handler);
+    } else {
+      btn.attachEvent('click', handler);
+    }
+    </script>
+</body>
+</html>
