@@ -16,7 +16,7 @@ exit /b 0
 :CHECK
 call :IF_EXIST node.exe
 if %errorlevel%==1 (
-    echo 你的系统没有安装node,无法进行编译　　　　　　　　　　　　　　　　　　　　　　　　　 
+    echo 你的系统没有安装nodejs,无法进行自动安装　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 
     goto :EXIST
 )
 

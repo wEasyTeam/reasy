@@ -1,7 +1,7 @@
 exports.init = function(argv) {
     if (argv.R || argv.rules) {
         argv.R = (argv.R || argv.rules).toString();
-        if (argv.R === 'true')argv.R = 'base';
+        if (argv.R === 'true') argv.R = 'base';
 
         var rules = argv.R.split(',');
 
@@ -11,7 +11,14 @@ exports.init = function(argv) {
         delete argv.R;
         delete argv.rules;
     }
+    if (argv._.length === 0 && !(argv.h || argv.help)) {
+        argv._ = ['release'];
+        process.argv[2] = 'release';
+    }
+    if (!(argv.d || argv.dest)) {
+        argv.d = './dist';
+    }
 
     delete argv.L;
     delete argv.live;
-}
+};
