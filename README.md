@@ -37,6 +37,9 @@
 > 注：建议将默认配置文件命名为`reasy-conf.js`，与fis3的配置文件`fis-conf.js`区分开来。
 
 
+## DEMO
+> https://github.com/wEasyTeam/reasy/tree/master/example
+
 ## 新增功能使用说明
 
 ### 新增API
