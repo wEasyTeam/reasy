@@ -79,10 +79,10 @@ function respawn() {
   return child;
 }
 
-function onFisConfChange() {
+function onFisConfChange(filename) {
   var argv = process.argv.slice(3);
   argv.pop();
-  fis.log.info('Detect `reasy-conf.js` modified, respawn `%s release %s`.', fis.cli.name, argv.join(' '));
+  fis.log.info('Detect `' + filename + '` modified, respawn `%s release %s`.', fis.cli.name, argv.join(' '));
   process.exit();
 }
 
@@ -116,7 +116,7 @@ function watch(options, next) {
       filepath.indexOf(root) === 0 && (filepath = filepath.substring(root.length));
 
       // todo 暂时不支持 -f 参数指定其他配置文件。
-      if (filepath === '/reasy-conf.js') {
+      if (filepath === '/reasy-conf.js' || filepath === '/fis-conf.js') {
         return false;
       }
 
@@ -174,7 +174,9 @@ function watch(options, next) {
         path = fis.util(path);
 
         if (path === root + '/reasy-conf.js') {
-          return onFisConfChange();
+          return onFisConfChange('reasy-conf.js');
+        } else if (path === root + '/fis-conf.js') {
+          return onFisConfChange('fis-conf.js');
         }
 
         fis.log.debug('Watch Event %s, path: %s', type, path);

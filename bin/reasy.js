@@ -7,8 +7,7 @@ var cli = new Liftoff({
     name: 'reasy', // 命令名字
     processTitle: 'reasy',
     moduleName: 'reasy',
-    configName: 'reasy-conf',
-
+    configName: '{reasy,fis}-conf',
     // only js supported!
     extensions: {
         '.js': null
@@ -29,6 +28,7 @@ cli.launch({
         fis = require(env.modulePath);
     }
     require('../libs/handleCli').init(argv);
+
     fis.set('system.localNPMFolder', path.join(env.cwd, 'node_modules/reasy'));
     fis.set('system.globalNPMFolder', path.dirname(__dirname));
     fis.cli.run(argv, env);

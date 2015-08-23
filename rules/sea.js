@@ -1,5 +1,5 @@
 module.exports = function(moduleDir, paths) {
-    moduleDir = moduleDir || '/modules/';
+    moduleDir = moduleDir || 'modules/';
     paths = paths || {};
     return this.hook('module', {
             mode: 'cmd',
@@ -19,4 +19,4 @@ module.exports = function(moduleDir, paths) {
         .match('::packager', {
             postpackager: fis.plugin('loader')
         });
-}
+};
