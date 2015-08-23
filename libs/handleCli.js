@@ -13,7 +13,7 @@ exports.init = function(argv) {
     }
     if (argv._.length === 0 && !(argv.h || argv.help || argv.v || argv.version)) {
         argv._ = ['release'];
-        process.argv[2] = 'release';
+        process.argv.splice(2, 0, 'release');
     }
     
     if (!(argv.d || argv.dest)) {
