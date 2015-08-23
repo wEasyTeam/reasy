@@ -11,10 +11,11 @@ exports.init = function(argv) {
         delete argv.R;
         delete argv.rules;
     }
-    if (argv._.length === 0 && !(argv.h || argv.help)) {
+    if (argv._.length === 0 && !(argv.h || argv.help || argv.v || argv.version)) {
         argv._ = ['release'];
         process.argv[2] = 'release';
     }
+    
     if (!(argv.d || argv.dest)) {
         argv.d = './dist';
     }
