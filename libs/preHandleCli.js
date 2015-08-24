@@ -15,7 +15,5 @@ exports.init = function(argv) {
         }
     }
 
-    delete argv.L;
-    delete argv.live;
     return argv;
 };
