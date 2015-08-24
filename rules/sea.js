@@ -1,5 +1,5 @@
 module.exports = function(moduleDir, paths) {
-    moduleDir = moduleDir || 'modules/';
+    moduleDir = moduleDir || 'modules';
     paths = paths || {};
     return this.hook('module', {
             mode: 'cmd',
@@ -10,10 +10,10 @@ module.exports = function(moduleDir, paths) {
             baseUrl: moduleDir,
             paths: paths
         })
-        .match(moduleDir + '**.js', {
+        .match(moduleDir + '/**.js', {
             isMod: true
         })
-        .match(moduleDir + 'sea.js', {
+        .match(moduleDir + '/sea*.js', {
             isMod: false
         }, true)
         .match('::packager', {

@@ -6,8 +6,8 @@ module.exports = function(dir) {
         mode: 'amd',
         forwardDeclaration: true
     })
-    .match(dir + '/**/*.js', {
-        isMod: true, // 组件建议都是匿名方式 define
+    .match(dir + '/**.js', {
+        isMod: true // 组件建议都是匿名方式 define
     })
     .match('::package', {
         // npm install [-g] fis3-postpackager-loader

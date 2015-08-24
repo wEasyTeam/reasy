@@ -4,15 +4,15 @@ module.exports = function(dir) {
     return this.hook('module', {
         mode: 'commonJs'
     })
-    .match('/' + dir + '/**/*.js', {
-        isMod: true, // ÉèÖÃ comp ÏÂ¶¼ÊÇÒ»Ğ©×é¼ş£¬×é¼ş½¨Òé¶¼ÊÇÄäÃû·½Ê½ define
+    .match(dir + '/**.js', {
+        isMod: true, // è®¾ç½® comp ä¸‹éƒ½æ˜¯ä¸€äº›ç»„ä»¶ï¼Œç»„ä»¶å»ºè®®éƒ½æ˜¯åŒ¿åæ–¹å¼ define
     })
     .match('::package', {
         // npm install [-g] fis3-postpackager-loader
-        // ·ÖÎö __RESOURCE_MAP__ ½á¹¹£¬À´½â¾ö×ÊÔ´¼ÓÔØÎÊÌâ
+        // åˆ†æ __RESOURCE_MAP__ ç»“æ„ï¼Œæ¥è§£å†³èµ„æºåŠ è½½é—®é¢˜
         postpackager: fis.plugin('loader', {
             resourceType: 'commonJs',
-            useInlineMap: true // ×ÊÔ´Ó³Éä±íÄÚÇ¶
+            useInlineMap: true // èµ„æºæ˜ å°„è¡¨å†…åµŒ
         })
     })
 };

@@ -28,7 +28,7 @@
         >cd reasy
         >reasy-install.bat
 
- > 如`npm`方式安装失败，可以下载安装脚本进行安装：[[Linux安装脚本](https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.sh)]   [[Windows安装脚本](https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.bat)]
+ > 如`npm`方式安装失败，可以下载安装脚本进行安装：[[Linux安装脚本](https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.sh)]   [[Windows安装脚本](https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.bat)]  [[Windows XP安装脚本](https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install-xp.bat)]
 
 ## 用法
 

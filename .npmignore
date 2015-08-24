@@ -4,7 +4,6 @@
 /.gitignore
 
 /example/dist_*
-/test
 /.tmp
 
 .DS_Store

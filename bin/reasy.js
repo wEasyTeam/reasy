@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 
 var Liftoff = require('liftoff');
-var argv = require('minimist')(process.argv.slice(2));
+var arg = require('minimist')(process.argv.slice(2));
+
+var argv = require('../libs/preHandleCli').init(arg);
+
 var path = require('path');
 var cli = new Liftoff({
     name: 'reasy', // 命令名字
