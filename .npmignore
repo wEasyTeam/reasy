@@ -3,7 +3,7 @@
 /.project
 /.gitignore
 
-/example
+/example/dist_*
 /test
 /.tmp
 
@@ -15,4 +15,5 @@
 *.tmp
 *.cmd
 *.bat
+/.git
 ~*
