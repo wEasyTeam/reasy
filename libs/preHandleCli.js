@@ -11,7 +11,6 @@ exports.init = function(argv) {
 
     if (!(argv.r || argv.root)) {
         if (require('fs').existsSync(process.cwd() + '/src')) {
-            console.log('ha')
             argv.r = argv.root = './src';
         }
     }
