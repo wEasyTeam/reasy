@@ -14,7 +14,7 @@
     "name": "lwdgit"
   },
   "engines": {
-    "node": ">= 1.2.0"
+    "node": ">= 1.0.0"
   },
   "license": "MIT",
   "dependencies": {
