@@ -1,7 +1,9 @@
-# reasy  [![NPM version](https://badge.fury.io/js/reasy.png)](https://www.npmjs.org/package/reasy)
+# reasy  
+[![NPM version](https://badge.fury.io/js/reasy.png)](https://www.npmjs.org/package/reasy)
+[![Build Status](https://api.travis-ci.org/wEasyTeam/reasy.png?branch=master)](https://travis-ci.org/wEasyTeam/reasy)
 
 [![NPM Download](https://nodei.co/npm-dl/reasy.png?months=1)](https://www.npmjs.org/package/reasy)
-[![Build Status](https://api.travis-ci.org/wEasyTeam/reasy.png?branch=master)](https://travis-ci.org/wEasyTeam/reasy)
+
 > 基于fis3的纯前端工程自动化工具
 
 
@@ -28,7 +30,7 @@
         >cd reasy
         >reasy-install.bat
 
- > 如`npm`方式安装失败，可以下载安装脚本进行安装：[[Linux安装脚本](https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.sh)]   [[Windows安装脚本](https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.bat)]
+ > 如`npm`方式安装失败，可以下载安装脚本进行安装：[[Linux安装脚本](https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.sh)]   [[Windows安装脚本](https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.bat)]    [[WindowsXP安装脚本](https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install-xp.bat)]
 
 ## 用法
 
