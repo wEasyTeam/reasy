@@ -1,5 +1,3 @@
-//var reasy = require('../bin/reasy.js');
-
 'use strict';
 var child_process = require('child_process');
 
