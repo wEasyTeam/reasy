@@ -6,6 +6,6 @@ AddReg=Reasy
 
 [Reasy]
 ;hkcr,"*\\shell\\Ò»¼ü±àÒë\\command",,,"""%1%\Sublime_Text.exe"" ""%%1"" %%*"
-hkcr,"Directory\\shell\\Ò»¼ü±àÒë\\command",,,"""C:\\windows\\System32\\cmd.exe"" ""/k title Ò»¼ü±àÒë&&reasy -r %%1"""
+hkcr,"Directory\\shell\\Ò»¼ü±àÒë\\command",,,"""C:\\windows\\System32\\cmd.exe"" ""/k title Ò»¼ü±àÒë&&cd %%1&&reasy -r %%1"""
 
-hkcr,"Folder\\shell\\Ò»¼ü±àÒë\\command",,,"""C:\\windows\\System32\\cmd.exe"" ""/k title Ò»¼ü±àÒë&&reasy -r %%1"""
+hkcr,"Folder\\shell\\Ò»¼ü±àÒë\\command",,,"""C:\\windows\\System32\\cmd.exe"" ""/k title Ò»¼ü±àÒë&&cd %%1&&reasy -r %%1"""
