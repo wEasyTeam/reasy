@@ -66,7 +66,7 @@
 * sea 对sea.js模块进行封装
 * mod 对modj.s模块进行封装
 * require 对require.js模块进行封装
-* jshint 对js进行lint
+* jshint 对js进行lint，进行lint时记得在命令行后加上`-l`或`--lint`
 * debug 去除压缩属性
 
 你也可以自己编写规则放置在工程目录下的rules目录下，如：`workdir/myconf.js`,则调用方法为：`reasy.extend('myconf', [args])`。
