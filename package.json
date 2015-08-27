@@ -1,6 +1,6 @@
 {
   "name": "reasy",
-  "version": "1.2.17",
+  "version": "1.2.18",
   "description": "An automatical tool for Front-end constructed by fis3",
   "main": "index.js",
   "bin": {
@@ -28,6 +28,7 @@
     "fis3-packager-map": ">=1.0.4",
     "fis-optimizer-html-minifier": ">=0.0.9",
     "fis-postprocessor-autoprefixer": ">=0.0.5",
+    "fis-lint-jshint": ">=0.0.10",
     "fis-parser-js-macro": "*",
     "liftoff": "^2.1.0",
     "minimist": "^1.1.1"
