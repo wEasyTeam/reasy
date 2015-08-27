@@ -1,0 +1,11 @@
+[Version]
+Signature="$Windows NT$"
+
+[DefaultInstall]
+AddReg=Reasy
+
+[Reasy]
+;hkcr,"*\\shell\\вЛМќБрвы\\command",,,"""%1%\Sublime_Text.exe"" ""%%1"" %%*"
+hkcr,"Directory\\shell\\вЛМќБрвы\\command",,,"""C:\\windows\\System32\\cmd.exe"" ""/k title Брвы%%1жа&&reasy -r %%1"""
+
+hkcr,"Folder\\shell\\вЛМќБрвы\\command",,,"""C:\\windows\\System32\\cmd.exe"" ""/k title Брвы%%1жа&&reasy -r %%1"""
