@@ -5,6 +5,7 @@
 
 /example/dist_*
 /.tmp
+/production
 
 .DS_Store
 

@@ -10,6 +10,8 @@ function set_root() {
 		dir=$(pwd)/${dir}
 	fi
 
+	dir=$dir/reasy
+
 	if [ -d $dir ] && [ $dir != $(pwd) ]; then 
 		read -p "\"$dir\" is already exist! are you sure to install in this?(y/n) " answer
 		if [ "$answer" != "y" ]; then
@@ -24,9 +26,9 @@ function set_root() {
 
 
 function init_environment() {
-	ROOT=$dir/reasy #reasy工具链目录
+	ROOT=$dir #reasy工具链目录
 	if [ ! -d $ROOT ] ; then
-	    mkdir $ROOT
+	    mkdir $ROOT -p
 	fi
 	cd $ROOT
 
