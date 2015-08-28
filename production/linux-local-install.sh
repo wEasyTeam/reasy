@@ -1,5 +1,7 @@
 #!/bin/bash
 
+NODE_VERSION="v0.12.7"
+
 function set_root() {
 	read -p "Which dir you want to install:($(pwd))?  " dir
 	if [ "$dir" = "" ]; then
@@ -44,17 +46,26 @@ function init_environment() {
 
 
 function install_node() {
-	local version="v0.12.7"
-	if [ $(arch) == x86_64 ]; then
+	local version=$NODE_VERSION
+	local arch=$(uname -a)
+	local res=$(expr match "$arch" ".*x86_64")
+
+	if [ $res -gt 0 ]; then
 		local nodeDir="node-${version}-linux-x64"
 	else 
 		local nodeDir="node-${version}-linux-x86"
 	fi
 
+
 	local nodegz="${nodeDir}.tar.gz"
 	local downloadUrl="https://nodejs.org/dist/${version}/${nodegz}"
 
-	wget ${downloadUrl}
+	echo "check if exist \"${nodegz}\""
+	if [ ! -e $nodegz ]; then
+		echo "start downloadding..."
+		wget ${downloadUrl}
+	fi
+	echo "extracting..."
 	tar -xzf ${nodegz}
 	mv ${nodeDir}/* .
 	rm -rf ${nodeDir}
