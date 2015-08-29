@@ -14,7 +14,7 @@ module.exports = function(args) {
         .match('**/_*.scss', {
             release: false
         })
-        .match('**.{asp,html,htm}', {
+        .match('**.{asp,html,htm,tpl}', {
             parser: fis.plugin('art-template', {
                 native: false,
                 define: args ? args.define : {}
