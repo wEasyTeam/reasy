@@ -15,7 +15,7 @@ module.exports = function(glob, config) {
         noempty: true
     };
 
-    config.ignored = config.ignored || [/(\bj\b|\bjquery|zepto|reasy|bootstrap|\brequire|\bsea|shim\b|\blib|\bcomponent|\bmin\b).*\.js/i];
+    config.ignored = config.ignored || [/(\bj\b|\bjquery|zepto|reasy|bootstrap|\brequire|\bsea|shim\b|shiv\b|\blib|\bcomponent|\bmin\b).*\.js/i];
     return this.match(glob, {
         lint: fis.plugin('jshint', config)
     });

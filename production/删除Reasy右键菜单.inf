@@ -5,6 +5,6 @@ Signature="$Windows NT$"
 DELREG=Reasy
 
 [Reasy]
-hkcr,"Directory\\shell\\Ò»¼ü±àÒë"
-hkcr,"Folder\shell\\Ò»¼ü±àÒë"
+hkcr,"Directory\\shell\\Reasy Release"
+hkcr,"Folder\shell\\Reasy Release"
 

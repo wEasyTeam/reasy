@@ -5,7 +5,7 @@ Signature="$Windows NT$"
 AddReg=Reasy
 
 [Reasy]
-;hkcr,"*\\shell\\Ò»¼ü±àÒë\\command",,,"""%1%\Sublime_Text.exe"" ""%%1"" %%*"
-hkcr,"Directory\\shell\\Ò»¼ü±àÒë\\command",,,"""C:\\windows\\System32\\cmd.exe"" ""/k title Ò»¼ü±àÒë&&cd %%1&&reasy -r %%1"""
+;hkcr,"*\\shell\\Reasy Release\\command",,,"""%1%\Sublime_Text.exe"" ""%%1"" %%*"
+;hkcr,"Directory\\shell\\Reasy Release\\command",,,"""C:\\windows\\System32\\cmd.exe"" ""/k title Reasy Release&&cd %%1&&reasy -r %%1 --contextmenu"""
 
-hkcr,"Folder\\shell\\Ò»¼ü±àÒë\\command",,,"""C:\\windows\\System32\\cmd.exe"" ""/k title Ò»¼ü±àÒë&&cd %%1&&reasy -r %%1"""
+hkcr,"Folder\\shell\\Reasy Release\\command",,,"""C:\\windows\\System32\\cmd.exe"" ""/k title Reasy release&&cd %%1&&reasy -r %%1 --contextmenu"""
