@@ -1,7 +1,6 @@
 @echo string
 < "%~f0" more +5 > tmp.reg
 regedit /s tmp.reg 
-pause
 del tmp.reg 
 echo Ìí¼Ó³É¹¦
 pause
