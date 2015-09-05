@@ -15,7 +15,12 @@ Object.defineProperty(global, 'reasy', {
     value: reasy
 });
 
-reasy.extend = reasy.config.Config.prototype.extend = function(module, args) {
+fis.extend = fis.config.Config.prototype.extend = 
+reasy.extend = reasy.config.Config.prototype.extend = 
+function(module, args) {
+    if (args && Object.prototype.toString.call(args) !== '[object Array]') {//如果参数不是以数组形式传递进来，则解析arguments
+        args = [].slice.call(arguments, 1);
+    }
     try {
         var modules;
         localModule = global.cwd + '/rules/' + module + '.js';
@@ -27,7 +32,11 @@ reasy.extend = reasy.config.Config.prototype.extend = function(module, args) {
 
         return modules.apply(this, args);
     } catch (e) {
-        fis.log.error('extended rules "' + module + '" not exist!');
+        if (e.toString().indexOf('Cannot find module') > -1) {
+            fis.log.error('extended rules "' + module + '" not exist!');
+        } else {
+            fis.log.error('extended rules "' + module + '" has error!!!\r\n' + e);
+        }
     }
 };
 

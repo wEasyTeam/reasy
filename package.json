@@ -28,7 +28,9 @@
     "fis-optimizer-html-minifier": ">=0.0.9",
     "fis-postprocessor-autoprefixer": ">=0.0.5",
     "fis-lint-jshint": ">=0.0.10",
+    "fis3-deploy-replace": ">=1.0.2",
     "fis-parser-js-macro": "*",
+    "reasy-command-rules": "*",
     "liftoff": "^2.1.0",
     "minimist": "^1.1.1"
   },

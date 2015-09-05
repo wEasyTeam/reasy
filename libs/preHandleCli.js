@@ -1,21 +1,21 @@
 var fs = require('fs'),
-path = require('path');
+    path = require('path');
 
 exports.init = function(argv) {
-    
+
     if (argv._.length === 0 && !(argv.h || argv.help || argv.v || argv.version)) {
         argv._ = ['release'];
         process.argv.splice(2, 0, 'release');
     }
-    
+
     var dest = argv.d || argv.dest,
-    root = argv.r || argv.root;
+        root = argv.r || argv.root;
 
     if (!dest) {
-         argv.d = './dist';
+        argv.d = './dist';
     }
 
-    if (!root) {//如果没有指定root和dest,且当前目录下有src目录,则将root指向./src,dest指向../dist,与root同级
+    if (!root) { //如果没有指定root和dest,且当前目录下有src目录,则将root指向./src,dest指向../dist,与root同级
         if (fs.existsSync(process.cwd() + '/src')) {
             argv.r = './src';
         } else if (!dest) {
@@ -30,7 +30,7 @@ exports.init = function(argv) {
         if (path.isAbsolute(root)) {
             if (!fs.existsSync(path.join(root, './src'))) {
                 if (!dest) argv.d = '../dist';
-                delete argv.r;//右键编译时当前目录已经无需指定-r
+                delete argv.r; //右键编译时当前目录已经无需指定-r
             } else {
                 argv.r = './src';
                 delete argv.root;
@@ -42,13 +42,12 @@ exports.init = function(argv) {
 
 
     var args = 'reasy';
+
     for (var cl in argv) {
-        args += ' -' + cl + ' ' + argv[cl];
+        args += ' -' + cl + ' ' + (argv[cl] instanceof Array ? argv[cl].join(' ') : argv[cl]); //如果是Array则join
     }
 
-
-
-    console.info('Execute command: `' + args.replace(/(\ -_|\ true|\ false)/g, '') + '`');
+    console.info('Execute command: `' + args.replace(/(\ -_|\ true|\ false)/g, '') + '`'); //去除 -_  true false
 
     return argv;
 };
