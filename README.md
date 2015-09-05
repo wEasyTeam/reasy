@@ -69,6 +69,7 @@
 * jshint 对js进行lint，进行lint时记得在命令行后加上`-l`或`--lint`
 * qunit 自动进行单元测试,需要自行安装`reasy-postpackager-qunit`,即`npm install -g reasy-postpackager-qunit`
 * iconfont 根据svg图标自动打包生成iconfont字体及相关样式
+* ldeploy 本地发布
 * debug 去除压缩属性
 
 你也可以自己编写规则放置在工程目录下的rules目录下，如：`workdir/myconf.js`,则调用方法为：`reasy.extend('myconf', [args])`。
