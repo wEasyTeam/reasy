@@ -72,10 +72,10 @@
 * ldeploy 本地发布
 * debug 去除压缩属性
 
-你也可以自己编写规则放置在工程目录下的rules目录下，如：`workdir/myconf.js`,则调用方法为：`reasy.extend('myconf', [args])`。
+你也可以自己编写规则放置在工程目录下的rules目录下，如：`workdir/myrule.js`,则调用方法为：`reasy.extend('myrule', args1, args2)`。
 rule文件书写示例：
 ```
-module.exports = function(args) {
+module.exports = function(args1, args2) {
     return this.match('**', {
         // ...  写法请参考FIS3配置文件写法
     });

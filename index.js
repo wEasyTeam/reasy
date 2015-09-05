@@ -18,9 +18,9 @@ Object.defineProperty(global, 'reasy', {
 fis.extend = fis.config.Config.prototype.extend = 
 reasy.extend = reasy.config.Config.prototype.extend = 
 function(module, args) {
-    if (args && Object.prototype.toString.call(args) !== '[object Array]') {//如果参数不是以数组形式传递进来，则解析arguments
-        args = [].slice.call(arguments, 1);
-    }
+    //if (args && Object.prototype.toString.call(args) !== '[object Array]') {//如果参数不是以数组形式传递进来，则解析arguments
+    args = [].slice.call(arguments, 1);
+    //}
     try {
         var modules;
         localModule = global.cwd + '/rules/' + module + '.js';
