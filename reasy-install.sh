@@ -12,21 +12,21 @@ function showVersion() {
 
 function check() {
 if (which npm > /dev/null 2>&1) then    
-if (which reasy > /dev/null 2>&1) then
-    echo "reasy has already install on the system!"
-else 
-    echo "reasy installing ...!"
-    install
-fi
+  if (which reasy > /dev/null 2>&1) then
+      echo "reasy has already install on the system!"
+  else 
+      echo "reasy installing ...!"
+      install
+  fi
 else
     echo "You should install npm first!"
-    return 0
+    return 9
 fi
 }
 
 check
 
-if ([ $? -eq 0 ]) then
+if ([ $? -eq 9 ]) then
     
    echo "and then excute the scrtip again!"
 else 
