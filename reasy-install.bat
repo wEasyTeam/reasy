@@ -1,6 +1,7 @@
 :: 请将这段代码保存到bat格式的文件中执行
 
 @echo off
+setlocal EnableDelayedExpansion
 @chcp 65001
 CLS
 ::用于解决uft8在控制台输出中文乱码的问题
