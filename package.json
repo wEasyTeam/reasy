@@ -1,6 +1,6 @@
 {
   "name": "reasy",
-  "version": "1.2.23",
+  "version": "1.2.24",
   "description": "An automatical tool for Front-end constructed by fis3",
   "main": "index.js",
   "bin": {
@@ -31,6 +31,7 @@
     "fis3-deploy-replace": ">=1.0.2",
     "fis-parser-js-macro": "*",
     "reasy-command-rules": "*",
+    "reasy-command-b28": "*",
     "liftoff": "^2.1.0",
     "minimist": "^1.1.1"
   },
