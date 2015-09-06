@@ -5,7 +5,7 @@ var defalutCommand = ['release', 'inspect', 'rules', 'server', 'init'];
 //以上command命令会进行自动设置
 
 function filterCommand(command) {
-    defalutCommand.some(function(key) {
+    return defalutCommand.some(function(key) {
         if (key === command) return true;
     });
 }
