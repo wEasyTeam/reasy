@@ -34,7 +34,7 @@ if %errorlevel%==1 (
 goto :eof
 
 :REINSTALL
-set /p choice=是否重新安装(y/n):
+set /p choice=是否进行更新(y/n):
 
 if !choice!==y (
     echo reasy编译工具正在自动重新安装，可能需要数分钟　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 
