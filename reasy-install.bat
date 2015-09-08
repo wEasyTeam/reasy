@@ -1,10 +1,7 @@
-:: è¯·å°†è¿™æ®µä»£ç ä¿å­˜åˆ°batæ ¼å¼çš„æ–‡ä»¶ä¸­æ‰§è¡Œ
+:: Çë½«Õâ¶Î´úÂë±£´æµ½bat¸ñÊ½µÄÎÄ¼þÖÐÖ´ÐÐ
 
 @echo off
 setlocal EnableDelayedExpansion
-@chcp 65001
-CLS
-::ç”¨äºŽè§£å†³uft8åœ¨æŽ§åˆ¶å°è¾“å‡ºä¸­æ–‡ä¹±ç çš„é—®é¢˜
 goto :START
 exit
 
@@ -17,35 +14,34 @@ exit /b 0
 :CHECK
 call :IF_EXIST node.exe
 if %errorlevel%==1 (
-    echo ä½ çš„ç³»ç»Ÿæ²¡æœ‰å®‰è£…nodejs,æ— æ³•è¿›è¡Œè‡ªåŠ¨å®‰è£…ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ 
+    echo ÄãµÄÏµÍ³Ã»ÓÐ°²×°nodejs,ÎÞ·¨½øÐÐ×Ô¶¯°²×°¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ 
     goto :EXIST
 )
 
 call :IF_EXIST reasy.cmd
 if %errorlevel%==1 (
-    echo ä½ çš„ç³»ç»Ÿæ²¡æœ‰å®‰è£…reasyç¼–è¯‘å·¥å…·ï¼Œæ­£åœ¨è‡ªåŠ¨å®‰è£…ï¼Œå¯èƒ½éœ€è¦æ•°åˆ†é’Ÿã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ 
+    echo ÄãµÄÏµÍ³Ã»ÓÐ°²×°reasy±àÒë¹¤¾ß£¬ÕýÔÚ×Ô¶¯°²×°£¬¿ÉÄÜÐèÒªÊý·ÖÖÓ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ 
     call npm install -g reasy --registry=https://registry.npm.taobao.org
     call npm install -g web-debug --registry=https://registry.npm.taobao.org
 
-    call :IF_EXIST reasy.cmd || echo reasyç¼–è¯‘å·¥å…·å®‰è£…å¤±è´¥ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ 
-    goto :VERSION
+    call :IF_EXIST reasy.cmd || echo reasy±àÒë¹¤¾ß°²×°Ê§°Ü
+    goto :VERSION¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ 
 ) else (
-    echo ä½ çš„ç³»ç»Ÿå·²ç»å®‰è£…äº†reasyç¼–è¯‘å·¥å…·ï¼Œç‰ˆæœ¬ä¸ºï¼šã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ 
+    echo ÄãµÄÏµÍ³ÒÑ¾­°²×°ÁËreasy±àÒë¹¤¾ß, °æ±¾Îª:
     call reasy -v
     call :REINSTALL
 )
 goto :eof
 
 :REINSTALL
-echo æ˜¯å¦é‡æ–°å®‰è£…?ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€
-set /p choice=(y/n):
+set /p choice=ÊÇ·ñÖØÐÂ°²×°(y/n):
 
 if !choice!==y (
-    echo reasyç¼–è¯‘å·¥å…·æ­£åœ¨è‡ªåŠ¨é‡æ–°å®‰è£…ï¼Œå¯èƒ½éœ€è¦æ•°åˆ†é’Ÿã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ 
+    echo reasy±àÒë¹¤¾ßÕýÔÚ×Ô¶¯ÖØÐÂ°²×°£¬¿ÉÄÜÐèÒªÊý·ÖÖÓ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ 
     call npm install -g reasy --registry=https://registry.npm.taobao.org
     call npm install -g web-debug --registry=https://registry.npm.taobao.org
 
-    call :IF_EXIST reasy.cmd || echo reasyç¼–è¯‘å·¥å…·å®‰è£…å¤±è´¥ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ 
+    call :IF_EXIST reasy.cmd || echo reasy±àÒë¹¤¾ß°²×°Ê§°Ü
     goto :VERSION
 ) else (
   goto :eof
