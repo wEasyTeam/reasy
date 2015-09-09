@@ -1,14 +1,6 @@
 var fs = require('fs'),
     path = require('path');
 
-var defalutCommand = ['release', 'inspect', 'rules', 'server', 'init'];
-//以上command命令会进行自动设置
-
-function filterCommand(command) {
-    return defalutCommand.some(function(key) {
-        if (key === command) return true;
-    });
-}
 
 exports.init = function(argv) {
 
@@ -17,7 +9,7 @@ exports.init = function(argv) {
         process.argv.splice(2, 0, 'release');
     }
 
-    if (filterCommand(argv._)) {
+    if (require('./filterCommand')(argv._[0])) {
         var dest = argv.d || argv.dest,
             root = argv.r || argv.root;
 
@@ -46,6 +38,8 @@ exports.init = function(argv) {
                     delete argv.root;
                 }
             }
+            argv.c = true;
+
             delete argv.contextmenu;
             delete argv.cm;
         }
@@ -53,14 +47,6 @@ exports.init = function(argv) {
         delete argv.contextmenu;
         delete argv.cm;
     }
-
-    var args = 'reasy';
-
-    for (var cl in argv) {
-        args += ' -' + cl + ' ' + (argv[cl] instanceof Array ? argv[cl].join(' ') : argv[cl]); //如果是Array则join
-    }
-
-    console.info('Execute command: `' + args.replace(/(\ -_|\ true|\ false)/g, '') + '`'); //去除 -_  true false
 
     return argv;
 };

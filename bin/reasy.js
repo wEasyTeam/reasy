@@ -25,12 +25,14 @@ cli.launch({
 
     global.cwd = env.cwd.replace(/\\/g, '/');
 
+    require('../libs/middleHandleCli').init(argv, env);
+
     if (!env.modulePath) {
         fis = require('../');
     } else {
         fis = require(env.modulePath);
     }
-    require('../libs/handleCli').init(argv);
+    require('../libs/postHandleCli').init(argv);
 
     fis.set('system.localNPMFolder', path.join(env.cwd, 'node_modules/reasy'));
     fis.set('system.globalNPMFolder', path.dirname(__dirname));
