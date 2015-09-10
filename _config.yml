@@ -110,7 +110,7 @@ follow:
 
 #################################### global configure #######################################
 
-username: lwdgit
+username: weasyteam
 baseurl: /reasy
 markdown: redcarpet
 safe: false
