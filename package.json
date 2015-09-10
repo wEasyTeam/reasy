@@ -1,10 +1,13 @@
 {
   "name": "reasy",
-  "version": "1.2.27",
+  "version": "1.2.28",
   "description": "An automatical tool for Front-end constructed by fis3",
   "main": "index.js",
   "bin": {
     "reasy": "bin/reasy.js"
+  },
+   "engines": {
+    "node": ">=0.12.0"
   },
   "scripts": {
     "preinstall": "node -e \"console.log('Reasy v.' + require('./package.json').version)\"",
