@@ -72,13 +72,14 @@ $./reasy-install.sh
 </code></pre>
 
 <blockquote>
-<p>如<code>npm</code>方式安装失败，可以下载安装脚本进行安装：[<a href="https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.sh">Linux安装脚本</a>]   [<a href="https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.bat">Windows安装脚本</a>]    [<a href="https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install-xp.bat">WindowsXP安装脚本</a>]</p>
-</blockquote>
-</li>
-</ol>
+<p>如<code>npm</code>方式安装失败，可以下载安装脚本进行安装：[<a href="https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.sh">Linux安装脚本</a>]   [<a href="https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.bat">Windows安装脚本</a>]
+将文件保存至本机后执行即可进行自动安装。</p>
 
 <h2>
 <a id="用法" class="anchor" href="#%E7%94%A8%E6%B3%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>用法</h2>
+</blockquote>
+</li>
+</ol>
 
 <blockquote>
 <p>详见： <a href="http://fis.baidu.com/">FIS3官网</a></p>
@@ -122,15 +123,19 @@ $./reasy-install.sh
 <li>sea 对sea.js模块进行封装</li>
 <li>mod 对modj.s模块进行封装</li>
 <li>require 对require.js模块进行封装</li>
-<li>lint 对js进行lint</li>
-<li>qunit 进行qunit单元测试</li>
+<li>jshint 对js进行lint，进行lint时记得在命令行后加上<code>-l</code>或<code>--lint</code>
+</li>
+<li>qunit 自动进行单元测试,需要自行安装<code>reasy-postpackager-qunit</code>,即<code>npm install -g reasy-postpackager-qunit</code>
+</li>
+<li>iconfont 根据svg图标自动打包生成iconfont字体及相关样式</li>
+<li>ldeploy 本地发布</li>
 <li>debug 去除压缩属性</li>
 </ul>
 
-<p>你也可以自己编写规则放置在工程目录下的rules目录下，如：<code>workdir/myconf.js</code>,则调用方法为：<code>reasy.extend('myconf', [args])</code>。
+<p>你也可以自己编写规则放置在工程目录下的rules目录下，如：<code>workdir/myrule.js</code>,则调用方法为：<code>reasy.extend('myrule', args1, args2)</code>。
 rule文件书写示例：</p>
 
-<pre><code>module.exports = function(args) {
+<pre><code>module.exports = function(args1, args2) {
     return this.match('**', {
         // ...  写法请参考FIS3配置文件写法
     });
