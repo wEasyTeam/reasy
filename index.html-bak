@@ -1,0 +1,9 @@
+---
+layout: default
+title: Reasy纯前端自动构建工具
+---
+{% if site.theme == 'kunka' %}
+	{% include {{site.theme}}_index.html %}
+{% else %}
+	{% include default_index.html %}
+{% endif %}
