@@ -6,7 +6,7 @@
   "bin": {
     "reasy": "bin/reasy.js"
   },
-   "engines": {
+  "engines": {
     "node": ">=0.12.0"
   },
   "scripts": {
