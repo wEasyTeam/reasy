@@ -20,7 +20,7 @@ module.exports = function(args) {
                 define: args ? args.define : {}
             })
         })
-        .match('**.{tpl,json}', {
+        .match('*.{tpl,json}', {
             release: false
         });
 };
