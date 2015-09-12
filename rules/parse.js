@@ -20,6 +20,10 @@ module.exports = function(args) {
                 define: args ? args.define : {}
             })
         })
+        .match('**.jsm', {
+            parser: fis.plugin('js-macro'),
+            isJsLike: true
+        })
         .match('*.{tpl,json}', {
             release: false
         });
