@@ -1,5 +1,6 @@
 #!/bin/bash
 #可以将该脚本放在任意目录执行
+#此脚本用于通过svn更新服务器端(或编译机上)reasy
 #执行方法:
 #chmod +x ./update_reasy.sh
 #./update_reasy.sh
@@ -117,7 +118,7 @@ function show_version() {
 }
 
 init_environment
-#co_origin #从svn上下载原始版本
+co_origin #从svn上下载原始版本
 if ([ $? -eq 0 ]) then
 	check  #通过npm连网更新reasy
 	show_version #显示版本号
