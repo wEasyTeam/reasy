@@ -3,7 +3,7 @@ module.exports = function() {
         .match('**.js', {
             optimizer: fis.plugin('uglify-js', {
                 mangle: {
-                    expect: ['require', 'define'] //不想被压缩的关键字
+                    expect: false//['require', 'define'] //不想被压缩的关键字
                 }
             })
         })

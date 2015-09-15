@@ -1,7 +1,9 @@
 module.exports = function() {
     return this
         .match('::package', {
-            spriter: fis.plugin('csssprites')
+            spriter: fis.plugin('csssprites', {
+                margin: 20
+            })
         })
         // 进行图片合并
         .match('*.{css,less,scss}', {

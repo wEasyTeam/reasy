@@ -24,7 +24,7 @@ module.exports = function(args) {
             parser: fis.plugin('js-macro'),
             isJsLike: true
         })
-        .match('*.{tpl,json}', {
+        .match('*.tpl', {
             release: false
         });
 };
