@@ -11,7 +11,7 @@ destination: ./_site
 future:      true
 lsi:         false
 pygments:    false
-markdown:    maruku
+markdown: redcarpet
 permalink:   date
 
 maruku:
