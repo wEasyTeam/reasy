@@ -6,7 +6,7 @@ baseurl:    /
 
 source:      .
 destination: ./_site
-plugins:     ./_plugins
+#plugins:     ./_plugins
 
 future:      true
 lsi:         false
@@ -18,8 +18,8 @@ maruku:
   use_tex:    false
   use_divs:   false
   png_engine: blahtex
-  png_dir:    images/latex
-  png_url:    /images/latex
+  png_dir:    images/
+  png_url:    /images/
 
 rdiscount:
   extensions: []
