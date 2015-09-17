@@ -43,7 +43,9 @@
 > https://github.com/wEasyTeam/reasy/tree/master/example
 
 ## 详细文档
-> http://weasyteam.github.io/reasy/2015/09/10/reasy.html
+> [Reasy纯前端工具使用教程(一)](http://weasyteam.github.io/reasy/2015/09/10/reasy.html)
+
+> [Reasy纯前端工具使用教程(二)--Reasy内置插件用法](http://weasyteam.github.io/reasy/2015/09/16/reasy2.html)
 
 ## 新增功能使用说明
 
