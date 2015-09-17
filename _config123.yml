@@ -112,7 +112,7 @@ follow:
 
 username: weasyteam
 baseurl: /reasy
-markdown: redcarpet
+markdown: kramdown
 safe: false
 highlighter: pygments
 title: Reasy纯前端自动构建工具
