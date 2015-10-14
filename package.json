@@ -37,7 +37,6 @@
     "reasy-command-b28": "*",
     "liftoff": "^2.1.0",
     "minimist": "^1.1.1",
-    "tiny-http": ">=2.0.0",
     "fis3-hook-amd": ">=0.1.0",
     "fis3-parser-reactjs": ">=1.0.0"
   },
