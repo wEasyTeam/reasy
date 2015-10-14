@@ -26,5 +26,13 @@ module.exports = function(args) {
         })
         .match('*.tpl', {
             release: false
-        });
+        })
+        .match('**.jsx', {
+            parser: 'reactjs',
+            rExt: 'js'
+        })
+        .match('*:jsx', {
+            parser: 'reactjs'
+        })
+        ;
 };

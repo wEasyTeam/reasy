@@ -39,6 +39,7 @@ exports.init = function(argv) {
                 }
             }
             argv.c = true;
+            argv.L = true;
 
             delete argv.contextmenu;
             delete argv.cm;

@@ -4,7 +4,7 @@ var reasy = module.exports = require('fis3'),
 reasy.require.prefixes.unshift('reasy');
 reasy.cli.name = 'reasy';
 reasy.cli.info = require('./package.json');
-reasy.cli.configName = 'reasy-conf';
+reasy.cli.configName = '{reasy,fis}-conf';
 
 require('./libs/logo')(reasy);
 
@@ -35,7 +35,7 @@ function(module, args) {
         if (e.toString().indexOf('Cannot find module') > -1) {
             fis.log.error('extended rules "' + module + '" not exist!');
         } else {
-            fis.log.error('extended rules "' + module + '" has error!!!\r\n' + e);
+            fis.log.error('extended rules "' + module + '" has error!!!\r\n' + e.stack);
         }
     }
 };

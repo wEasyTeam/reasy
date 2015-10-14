@@ -1,14 +1,9 @@
-module.exports = function(dir) {
-    dir = dir || 'modules';
-    // npm install [-g] fis3-hook-module
-
-    return this.hook('module', {
-        mode: 'amd',
-        forwardDeclaration: true
-    })
-    .match(dir + '/**.js', {
-        isMod: true // 组件建议都是匿名方式 define
-    })
+module.exports = function(config) {
+    var _config = config;
+    config['mode'] = 'amd';
+    config['forwardDeclaration'] = false;
+    return this
+    .hook('amd', config)
     .match('::package', {
         // npm install [-g] fis3-postpackager-loader
         // 分析 __RESOURCE_MAP__ 结构，来解决资源加载问题

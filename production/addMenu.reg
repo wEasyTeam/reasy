@@ -1,3 +1,3 @@
 Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\Folder\shell\Reasy release\command]
-@="\"cmd.exe\" \"/k title Reasy release&&cd %1&&reasy -r %1 --contextmenu\""
+@="\"cmd.exe\" \"/k title Reasy release&&cd %1&&reasy -r %1 -w --contextmenu\""
