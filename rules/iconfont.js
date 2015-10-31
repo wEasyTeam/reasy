@@ -1,8 +1,11 @@
-module.exports = function(args) {
-    return this.hook('iconfont', {
-        'fonts': '**.svg', //图标目录
-        'destFont': 'fonts_release', //产出字体目录
-        'fontName': 'reasy_font', //产出字体名称
-        'destHtml': 'fonts_release/demo.html'
-    });
+module.exports = function(conf) {
+    conf = conf || {};
+    conf.fonts = conf.fonts || '**.svg';
+    conf.destFont = conf.destFont || 'fonts';
+    conf.fontName = conf.fontName || 'icon-font';
+    conf.destCss = conf.destCss || require('path').join(conf.destFont, 'font.css');
+    conf.iconClass = conf.iconClass || 'icon-font';
+    conf.placeholder = conf.placeholder || 'iconfont';
+    conf.destHtml = conf.destHtml !== undefined ? conf.destHtml : 'fonts/demo.html';
+    return this.hook('iconfont', conf);
 }

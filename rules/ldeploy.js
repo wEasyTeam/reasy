@@ -1,4 +1,4 @@
-function replacer(opt, fis) {
+function replacer(opt) {
     if (!opt)return;
     if (!Array.isArray(opt)) {
         opt = [opt];
@@ -34,6 +34,6 @@ function replacer(opt, fis) {
 
 module.exports = function(args) {
     return this.match('**', {
-        deploy: replacer(args, this)
+        deploy: replacer(args)
     });
 };

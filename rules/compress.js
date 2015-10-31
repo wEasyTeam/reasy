@@ -1,13 +1,14 @@
 module.exports = function() {
     return this
-        .match('**.js', {
+        .match('**.{js.jsx}', {
             optimizer: fis.plugin('uglify-js', {
-                mangle: {
-                    expect: false//['require', 'define'] //不想被压缩的关键字
+                mangle: false,
+                compress: {
+                    drop_console: true
                 }
             })
         })
-        .match('**.{css,scss,less}', {
+        .match('**.{css,scss,less,styl}', {
             optimizer: fis.plugin('clean-css')
         })
         .match('**.png', {
