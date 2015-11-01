@@ -1,6 +1,6 @@
 module.exports = function() {
     return this
-        .match('**.{js.jsx}', {
+        .match('**.{js, jsx}', {
             optimizer: fis.plugin('uglify-js', {
                 mangle: false,
                 compress: {

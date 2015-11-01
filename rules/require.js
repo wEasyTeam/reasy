@@ -1,5 +1,5 @@
 module.exports = function(config) {
-    var _config = config;
+   
     config['mode'] = 'amd';
     config['forwardDeclaration'] = false;
     return this

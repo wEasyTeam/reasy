@@ -22,7 +22,6 @@ call :IF_EXIST reasy.cmd
 if %errorlevel%==1 (
     echo 你的系统没有安装reasy编译工具，正在自动安装，可能需要数分钟　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 
     call npm install -g reasy --registry=https://registry.npm.taobao.org
-    call npm install -g web-debug --registry=https://registry.npm.taobao.org
 
     call :IF_EXIST reasy.cmd || echo reasy编译工具安装失败
     goto :VERSION　　　　　　　　　　　　　　　　　　　　　　　　　 
@@ -39,7 +38,6 @@ set /p choice=是否进行更新(y/n):
 if !choice!==y (
     echo reasy编译工具正在自动重新安装，可能需要数分钟　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 
     call npm install -g reasy --registry=https://registry.npm.taobao.org
-    call npm install -g web-debug --registry=https://registry.npm.taobao.org
 
     call :IF_EXIST reasy.cmd || echo reasy编译工具安装失败
     goto :VERSION
