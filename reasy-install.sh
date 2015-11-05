@@ -2,7 +2,6 @@
 
 function install(){ 
     npm install -g reasy
-    npm install -g web-debug
     echo "You have already install reasy! Start to enjoy it!"
 }
 
