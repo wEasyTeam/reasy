@@ -32,6 +32,8 @@
 
  > 如`npm`方式安装失败，可以下载安装脚本进行安装：[[Linux安装脚本](https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.sh)]   [[Windows安装脚本](https://raw.githubusercontent.com/wEasyTeam/reasy/master/reasy-install.bat)]
  > 将文件保存至本机后执行即可进行自动安装。
+ 
+
 ## 用法
 
 > 详见： [FIS3官网](http://fis.baidu.com/)
