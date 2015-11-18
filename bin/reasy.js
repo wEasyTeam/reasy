@@ -37,4 +37,5 @@ cli.launch({
     fis.set('system.localNPMFolder', path.join(env.cwd, 'node_modules/reasy'));
     fis.set('system.globalNPMFolder', path.dirname(__dirname));
     fis.cli.run(argv, env);
+    require('../libs/afterCli')(argv);
 });

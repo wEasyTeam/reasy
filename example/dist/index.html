@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mod.js</title>
+    <script type="text/javascript" src="/static/mod.js"></script>
+    <link rel="stylesheet" href="/a.css">
+</head>
+<body>
+    <p> Hello, World. </p>
+    <button id="btn">load async js</button>
+    <script type="text/javascript">
+    require('./modules/1-0/1-0.js');
+
+    var btn = document.getElementById('btn');
+    var handler = function() {
+      require(['./modules/2-0/2-0.js']);
+    };
+
+    if (btn.addEventListener) {
+      btn.addEventListener('click', handler);
+    } else {
+      btn.attachEvent('click', handler);
+    }
+    </script>
+<script type="text/javascript" charset="utf-8" src="http://192.168.80.2:8132/livereload.js"></script></body>
+</html>

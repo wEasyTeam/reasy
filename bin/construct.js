@@ -20,7 +20,9 @@ function install() {
 function replace() {
     var dist = path.join(root, 'node_modules/fis3/node_modules/fis3-command-release/lib/watch.js'),
         vendor = path.join(root, 'vendor/watch.js');
-
+    if (!fs.existsSync(dist)) {//如果不存在，则可能是新版npm
+        dist = path.join(root, 'node_modules/fis3-command-release/lib/watch.js');
+    }
     fs.rename(dist, dist + '.bak', function(err) {
         if (!err) {
             fs.writeFileSync(dist, fs.readFileSync(vendor));

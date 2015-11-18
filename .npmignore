@@ -2,6 +2,7 @@
 /.settings
 /.project
 /.gitignore
+/node_modules
 
 /example/dist_*
 /.tmp

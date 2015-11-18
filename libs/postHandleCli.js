@@ -11,21 +11,6 @@ exports.init = function(argv) {
 
     }
 
-    if (argv['child-flag'] && (argv.L || argv.live)) {
-        var ar = [
-            'node',
-            require('path').join(__dirname, 'startServer.js'),
-            fis.config.get('port') || 8080,
-            require('path').resolve(argv.d),
-            'true'
-        ].join(' ');
-
-        //var sv = require('child_process').exec(ar);
-        /*sv.stdout.on('data', function(data) {
-            fis.log.info(data);
-        });*/
-    }
-
     //将自动应用的规则打印输出到控制台
     var args = 'reasy';
 
